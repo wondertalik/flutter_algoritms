@@ -1,6 +1,6 @@
-import 'package:flutter_application_5/modules/modules.dart';
+import 'package:flutter_algoritms/modules/modules.dart';
 
-class ShellSortImpl<T extends Comparable> extends SortingBase<T> {
+class ShellSortImpl<T extends Comparable> extends SortBase<T> {
   @override
   List<T> sort({
     required List<T> values,

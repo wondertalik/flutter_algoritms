@@ -1,4 +1,4 @@
-abstract class SortingBase<T extends Comparable> {
+abstract class SortBase<T extends Comparable> {
   List<T> sort({
     required List<T> values,
     SortDirection direction = SortDirection.ascending,

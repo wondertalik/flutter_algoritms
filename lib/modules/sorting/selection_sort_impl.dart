@@ -1,6 +1,6 @@
-import 'package:flutter_application_5/modules/modules.dart';
+import 'package:flutter_algoritms/modules/modules.dart';
 
-class SelectSortImpl<T extends Comparable> extends SortingBase<T> {
+class SelectionSortImpl<T extends Comparable> extends SortBase<T> {
   @override
   List<T> sort({
     required List<T> values,
@@ -8,8 +8,8 @@ class SelectSortImpl<T extends Comparable> extends SortingBase<T> {
   }) {
     int n = values.length; //
     for (int i = 0; i < n; i++) {
-      // replace a[i] with а[i+1...n]
-      int min = i; //index min o max elements
+      //exchange a[i] with entry in a[i+1...N).
+      int min = i; //index min o max entry
       for (int j = i + 1; j < n; j++) {
         if (compare(direction, values[j], values[min])) min = j;
       }
