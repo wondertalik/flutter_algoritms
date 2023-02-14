@@ -1,8 +1,5 @@
 abstract class SortBase<T extends Comparable> {
-  List<T> sort({
-    required List<T> values,
-    SortDirection direction = SortDirection.ascending,
-  });
+  List<T> sort(List<T> a, {SortOrder order = SortOrder.ascending});
 
   void exch(List<Comparable> a, int i, int j) {
     Comparable t = a[i];
@@ -10,10 +7,9 @@ abstract class SortBase<T extends Comparable> {
     a[j] = t;
   }
 
-  bool compare(SortDirection direction, T v, T w) {
-    final compareDirection =
-        direction == SortDirection.ascending ? _less : _above;
-    return compareDirection(v, w);
+  bool compare(SortOrder order, T v, T w) {
+    final compareOrder = order == SortOrder.ascending ? _less : _above;
+    return compareOrder(v, w);
   }
 
   bool _less(T v, T w) {
@@ -27,4 +23,4 @@ abstract class SortBase<T extends Comparable> {
   }
 }
 
-enum SortDirection { ascending, descending }
+enum SortOrder { ascending, descending }

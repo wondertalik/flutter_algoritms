@@ -16,7 +16,7 @@ class MainApp extends StatelessWidget {
           child: ElevatedButton(
             onPressed: () {
               final values = [5, 5, 1, 2, 3, 4, 5, 6, 7];
-              var sorted = InsertionSortImpl().sort(values: values);
+              var sorted = InsertionSortImpl().sort(values);
               print(sorted);
             },
             child: const Text('Sort'),
